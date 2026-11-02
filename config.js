@@ -2,7 +2,7 @@
 window.HEN = {
   name: "Hen One",
   ticker: "HEN",
-  ca: "COMING_SOON",
+  ca: "0x09c5ebe1e5550cb1d9fc012e985fca11d7377c00",
   dexscreenerPair: "",
   buyUrl: "#buy",
   chartUrl: "#chart",
