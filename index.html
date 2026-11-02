@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hen One ($HEN) — the little Grok bot that sorta walks</title>
+  <meta name="description" content="Hen One ($HEN) — DIY bipedal Grok bot robot meme. Named by @Baconbrix. Sorta walks. Gives up abruptly. Cartoon robot energy." />
+  <meta property="og:title" content="Hen One ($HEN)" />
+  <meta property="og:description" content="I’m naming the Grok bot robot Hen One. Little bot can sorta walk — then gives up abruptly." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="assets/og.jpg" />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js"></script>
+</head>
+<body>
+  <canvas id="spark-canvas" aria-hidden="true"></canvas>
+  <div class="fx-vignette" aria-hidden="true"></div>
+  <div class="fx-glow" aria-hidden="true"></div>
+
+  <!-- ENTER GATE -->
+  <div id="gate" class="gate" role="dialog" aria-label="Boot Hen One">
+    <div class="gate__inner">
+      <img class="gate__logo" src="assets/logo.png" alt="" width="120" height="120" />
+      <pre class="gate__ascii" aria-hidden="true">   [◉]
+  ╔═══╗
+  ║HEN║
+  ╚═╤═╝
+   /|\
+  _/ \_
+ BOOT…</pre>
+      <h1 class="gate__title">BOOT HEN ONE</h1>
+      <p class="gate__sub">DIY Grok bot · $HEN</p>
+      <button type="button" id="gate-enter" class="gate__btn">CLICK TO BOOT</button>
+      <p class="gate__mute">he sorta walks · then gives up</p>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#hero">
+      <img src="assets/logo.png" alt="" width="36" height="36" />
+      <span>HEN ONE</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#lore">Lore</a>
+      <a href="#buy">How to buy</a>
+      <a href="#chart">Chart</a>
+      <a href="#signal">Signal</a>
+      <a href="#vault">Vault</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav__cta" id="nav-buy" href="#buy">Buy</a>
+    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </header>
+  <div class="nav-mobile" id="nav-mobile" hidden>
+    <a href="#lore">Lore</a>
+    <a href="#buy">How to buy</a>
+    <a href="#chart">Chart</a>
+    <a href="#signal">Signal</a>
+    <a href="#vault">Vault</a>
+    <a href="#faq">FAQ</a>
+    <a href="#buy" id="nav-buy-m">Buy</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <img src="assets/hero.jpg" alt="Hen One — cartoon DIY robot mid-waddle" />
+        <div class="hero__shade"></div>
+      </div>
+      <div class="hero__content">
+        <p class="eyebrow">DIY Grok bot · cartoon robot meme</p>
+        <h1 class="hero__title">
+          <span class="hero__word">HEN ONE</span>
+          <span class="hero__tick">$HEN</span>
+        </h1>
+        <p class="hero__tag">little grok bot can <em>sorta walk</em> — then gives up abruptly. named by <em>@Baconbrix</em>.</p>
+
+        <div class="ca-pill" id="ca-pill">
+          <span class="ca-pill__label">CA</span>
+          <code class="ca-pill__addr" id="ca-addr">COMING_SOON</code>
+          <button type="button" class="ca-pill__copy" id="ca-copy" aria-label="Copy contract address">Copy</button>
+        </div>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" id="btn-buy" href="#buy">Buy</a>
+          <a class="btn btn--ghost" id="btn-chart" href="#chart">Chart</a>
+          <a class="btn btn--ghost" id="btn-x" href="https://x.com/Baconbrix/status/2116980564909859142" target="_blank" rel="noopener">X</a>
+        </div>
+        <p class="hero__pair-note" id="pair-note">Dex pair drops here when live — paste into <code>config.js</code>.</p>
+      </div>
+      <div class="hero__float" aria-hidden="true">
+        <img src="assets/logo.png" alt="" class="mascot" />
+      </div>
+    </section>
+
+    <!-- BANNER STRIP -->
+    <div class="banner-strip">
+      <img src="assets/banner-1500x500.png" alt="Hen One banner" width="1500" height="500" />
+    </div>
+
+    <!-- LORE -->
+    <section class="section lore" id="lore">
+      <div class="section__head">
+        <p class="eyebrow">Narrative</p>
+        <h2>Named. Wired.<br />Sorta walks.</h2>
+        <p class="section__lead">Evan Bacon (@Baconbrix) built a tiny DIY bipedal Grok bot — open-top wires, camera-lens eye, birdlike Z-legs — then named it <strong>Hen One</strong>.</p>
+      </div>
+      <div class="lore__grid">
+        <article class="lore-card">
+          <div class="lore-card__icon" aria-hidden="true">🤖</div>
+          <h3>Grok bot IRL</h3>
+          <p>Not a render farm flex. A real kitchen-counter biped with a camera face, rainbow jumper wires, and glowing LEDs.</p>
+        </article>
+        <article class="lore-card">
+          <div class="lore-card__icon" aria-hidden="true">🐔</div>
+          <h3>Hen One</h3>
+          <p>“I’m naming the Grok bot robot Hen One.” Official christening from @Baconbrix. The ticker writes itself: <strong>$HEN</strong>.</p>
+        </article>
+        <article class="lore-card">
+          <div class="lore-card__icon" aria-hidden="true">🚶</div>
+          <h3>Sorta walks</h3>
+          <p>He can sorta walk now. Then he gives up abruptly. That is the whole personality — and the whole meme.</p>
+        </article>
+        <article class="lore-card lore-card--ascii">
+          <pre class="ascii-block" aria-hidden="true">   [◉]
+  ╔═══╗
+  ║HEN║
+  ╚═╤═╝
+   /|\
+  _/ \_</pre>
+          <h3>Maker energy</h3>
+          <p>3D-printed black plastic. Exposed circuitry. Cute DIY robot elevated to Robinhood-tier meme packaging.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- HOW TO BUY -->
+    <section class="section buy" id="buy">
+      <div class="section__head">
+        <p class="eyebrow">Launch prep</p>
+        <h2>How to buy</h2>
+        <p class="section__lead">Chain TBA until CA is live. Generic steps — only use the CA from this site.</p>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step__n">01</span>
+          <div>
+            <h3>Get a wallet</h3>
+            <p>Use a wallet that matches the launch chain once CA goes live (watch official channels).</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__n">02</span>
+          <div>
+            <h3>Fund for gas</h3>
+            <p>Hold the native gas token for the chain Hen One launches on.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__n">03</span>
+          <div>
+            <h3>Open a trusted DEX</h3>
+            <p>Use a major DEX / aggregator. Never buy from a random Telegram bot.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__n">04</span>
+          <div>
+            <h3>Paste CA · swap</h3>
+            <p>Copy the CA from the pill above when it goes live. Anyone DMing a different CA is a scam.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CHART -->
+    <section class="section chart" id="chart">
+      <div class="section__head">
+        <p class="eyebrow">Market</p>
+        <h2>Chart</h2>
+      </div>
+      <div id="chart-empty" class="chart-empty">
+        <p>Pair not live yet. When <code>dexscreenerPair</code> is set in <code>config.js</code>, the DexScreener chart and stats appear here.</p>
+      </div>
+      <div id="chart-live" class="chart-live" hidden>
+        <div class="stats" id="dex-stats">
+          <div class="stat"><span>Price</span><strong id="stat-price">—</strong></div>
+          <div class="stat"><span>Liquidity</span><strong id="stat-liq">—</strong></div>
+          <div class="stat"><span>24h Vol</span><strong id="stat-vol">—</strong></div>
+          <div class="stat"><span>FDV</span><strong id="stat-fdv">—</strong></div>
+        </div>
+        <div class="chart-frame">
+          <iframe id="dex-iframe" title="DexScreener chart" loading="lazy" allow="clipboard-write"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNAL / TWEETS + VIDEO -->
+    <section class="section signal" id="signal">
+      <div class="section__head">
+        <p class="eyebrow">Signal</p>
+        <h2>The posts that started it</h2>
+        <p class="section__lead">Naming tweet + the walk-then-give-up video from @Baconbrix.</p>
+      </div>
+      <div class="signal__grid">
+        <div class="tweet-wrap">
+          <h3 class="signal__label">Naming</h3>
+          <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true">
+            <p lang="en" dir="ltr">I’m naming the Grok bot robot Hen One</p>
+            &mdash; Evan Bacon (@Baconbrix)
+            <a href="https://x.com/Baconbrix/status/2116980564909859142">November 1, 2026</a>
+          </blockquote>
+        </div>
+        <div class="tweet-wrap">
+          <h3 class="signal__label">Walk cam</h3>
+          <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true">
+            <p lang="en" dir="ltr">Little grok bot can sorta walk now! But he gives up abruptly.</p>
+            &mdash; Evan Bacon (@Baconbrix)
+            <a href="https://x.com/Baconbrix/status/2116954526695780404">November 1, 2026</a>
+          </blockquote>
+        </div>
+      </div>
+      <div class="video-card">
+        <h3 class="signal__label">In-page walk reel</h3>
+        <p class="video-card__note">Hosted copy of the Baconbrix walk clip — plays even if embeds stall.</p>
+        <video
+          class="video-card__player"
+          controls
+          playsinline
+          preload="metadata"
+          poster="assets/photo-logo.png"
+          src="assets/hen-walk.mp4"
+        >
+          Your browser does not support video.
+          <a href="https://x.com/Baconbrix/status/2116954526695780404/video/1">Watch on X</a>
+        </video>
+      </div>
+    </section>
+
+    <!-- VAULT -->
+    <section class="section vault" id="vault">
+      <div class="section__head">
+        <p class="eyebrow">Meme vault</p>
+        <h2>Cartoon robot art</h2>
+      </div>
+      <div class="vault__grid">
+        <figure class="vault__item"><img src="assets/vault1.jpg" alt="Hen One vault — give up pose" loading="lazy" /></figure>
+        <figure class="vault__item"><img src="assets/vault2.jpg" alt="Hen One vault — proud chicken king" loading="lazy" /></figure>
+        <figure class="vault__item"><img src="assets/og.jpg" alt="Hen One OG brand art" loading="lazy" /></figure>
+        <figure class="vault__item vault__item--logo"><img src="assets/logo.png" alt="Hen One cartoon logo" loading="lazy" /></figure>
+        <figure class="vault__item"><img src="assets/photo-logo.png" alt="Hen One real DIY photo" loading="lazy" /></figure>
+        <figure class="vault__item"><img src="assets/hero.jpg" alt="Hen One hero scene" loading="lazy" /></figure>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="section__head">
+        <p class="eyebrow">Trust</p>
+        <h2>FAQ · anti-scam</h2>
+      </div>
+      <div class="faq__list">
+        <details open>
+          <summary>What is Hen One?</summary>
+          <p>Hen One is the DIY bipedal “Grok bot” robot built / shown by Evan Bacon (@Baconbrix) — camera-lens eye, open-top wires, birdlike legs. He named it Hen One. $HEN is the meme ticker.</p>
+        </details>
+        <details>
+          <summary>Where is the contract address?</summary>
+          <p>Only the CA shown in the pill on this site (currently <code>COMING_SOON</code>). Anyone DMing a different CA is a scam.</p>
+        </details>
+        <details>
+          <summary>What chain?</summary>
+          <p>Not confirmed in the origin posts. How-to-buy stays chain-agnostic until CA + pair are set in <code>config.js</code>.</p>
+        </details>
+        <details>
+          <summary>Is there a chart yet?</summary>
+          <p>Chart embeds only when <code>dexscreenerPair</code> is set — no empty Dex holes.</p>
+        </details>
+        <details>
+          <summary>Is this affiliated with xAI / Grok?</summary>
+          <p>No. Community meme around a maker’s DIY robot nicknamed after Grok bot vibes. Not official equity. DYOR.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <img src="assets/logo.png" alt="" width="40" height="40" />
+      <div>
+        <strong>Hen One</strong>
+        <span>$HEN · sorta walks</span>
+      </div>
+    </div>
+    <p class="footer__warn">Meme coin. Not financial advice. Official CA only — ignore DMs. Not affiliated with xAI.</p>
+    <p class="footer__copy">© Hen One · origin @Baconbrix</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden>Copied</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="main.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>
